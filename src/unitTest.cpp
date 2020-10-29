@@ -2,14 +2,27 @@
 
 using namespace std;
 bool unitTestFunc() {
-  //   int a = 5, b = 12;
-  //   for (int i = a; i <= b; ++i) {
-  //     cout << "test" << i  << ":" << pairWithString(i) << "\n";
-  //   }
-  //   std::cout << "max = " << max_of_four(5, 2, 3, 4);
+ /* VARIABLE FOR UNIT TESTS: test-id, test-name, pass/fail-check */
+  static Test thisTest;
+  static bool allPassed = true;
 
-  // WIP:
-  varArr();
+  /*******************************************************************************/
+  thisTest.Name = "INIT OUTPUT";
+  TestHeader(thisTest);
+  /*******************************************************************************/
+  /* TEST_BODY STARTS BELOW */
+  allPassed = []() {
+    std::string tString = "THIS IS A TEST STRING.";
+    std::cout << tString;
+    return true;
+  }();
+  errCatch(allPassed, thisTest);
 
-  return true;
+  /*******************************************************************************/
+  thisTest.Name = " ";
+  TestHeader(thisTest);
+  /*******************************************************************************/
+  /* TEST_BODY STARTS BELOW */
+
+  return allPassed;
 }
