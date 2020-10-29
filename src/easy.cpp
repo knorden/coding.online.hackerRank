@@ -154,3 +154,23 @@ void varArr() {
     cout << vec_Big[(*vec_Small)[i]][(*vec_Small)[i + 1]] << '\n';
   }
 }
+
+string timeConversion(string s) {
+  string token = "";
+  int h = stoi(s.substr(0, 2));
+  if (s.at(8) == 'P') {
+    if (h < 12)
+      h += 12;
+    else if (h == 12)
+      h = 12;
+  } else {
+    if (h == 12) h = 0;
+  }
+  if (h < 10)
+    token = "0" + to_string(h);
+  else
+    token = to_string(h);
+  s.replace(0, 2, token);
+  s.erase(8, s.back() - 1);
+  return s;
+}

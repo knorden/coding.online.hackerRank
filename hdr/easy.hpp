@@ -13,5 +13,6 @@ int birthdayCakeCandles(std::vector<int> candles);
 std::string pairWithString(int n);
 int max_of_four(int a, int b, int c, int d);
 void varArr();
+string timeConversion(string s);
 
 #endif
