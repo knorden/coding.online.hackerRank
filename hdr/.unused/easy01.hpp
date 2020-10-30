@@ -1,7 +1,8 @@
-#ifndef EASY_HPP
-#define EASY_HPP
+#ifndef EASY01_HPP
+#define EASY01_HPP
 
-#include "_just_STL.hpp"
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -13,6 +14,6 @@ int birthdayCakeCandles(std::vector<int> candles);
 std::string pairWithString(int n);
 int max_of_four(int a, int b, int c, int d);
 void varArr();
-string timeConversion(string s);
+std::string timeConversion(std::string s);
 
 #endif

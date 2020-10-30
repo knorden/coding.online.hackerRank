@@ -1,4 +1,4 @@
-#include "easy.hpp"
+#include "easy01.hpp"
 
 void staircase(int n) {
   for (int line = 0; line < n; ++line) {
